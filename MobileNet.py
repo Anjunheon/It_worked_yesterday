@@ -70,34 +70,6 @@ test_data = test_data.reshape((test_num * 10, width, height, 1))
 test_label = to_categorical(test_label)
 # ----------------------------------------- #
 
-# Normalization
-'''
-print("mean before normalization:", np.mean(train_data))
-print("std before normalization:", np.std(train_data))
-
-mean = [0, 0, 0]
-std = [0, 0, 0]
-newX_train = np.ones(train_data.shape)
-newX_test = np.ones(test_data.shape)
-# train set에 있는 데이터로만 평균과 표준편차를 구함
-for i in range(3):
-    mean[i] = np.mean(train_data[i, :, :])
-    std[i] = np.std(train_data[i, :, :])
-
-# train과 test셋 모두 정규화 작업
-for i in range(3):
-    newX_train[i, :, :] = train_data[i, :, :] - mean[i]
-    newX_train[i, :, :] = newX_train[i, :, :] / std[i]
-    newX_test[i, :, :] = train_data[i, :, :] - mean[i]
-    newX_test[i, :, :] = newX_test[i, :, :] / std[i]
-
-X_train = newX_train
-X_test = newX_test
-
-print("mean after normalization:", np.mean(X_train))
-print("std after normalization:", np.std(X_train))
-print(X_train.max())
-'''
 # ------------------------------------------#
 
 # 모델 구성
@@ -140,7 +112,7 @@ model.compile(loss='categorical_crossentropy',
               metrics=['accuracy'])
 
 # 4. 모델 학습시키기
-model.fit(train_data, train_label, epochs=5, batch_size=8, validation_data=(verfi_data, verfi_label), verbose=1, shuffle=True)
+model.fit(train_data, train_label, epochs=50, batch_size=32, validation_data=(verfi_data, verfi_label), verbose=1, shuffle=True)
 
 # 5. 모델 평가하기
 loss_and_metrics = model.evaluate(test_data, test_label, verbose=0)
