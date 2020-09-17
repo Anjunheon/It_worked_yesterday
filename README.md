@@ -8,6 +8,9 @@
 * 2020.09.10 Image_generator 코드 추가
   * 이미지 증식
 
+* 2020.09.17 Model_MobileNet.py 코드 추가
+  * 코드 출처 : https://kau-deeperent.tistory.com/59
+
 ## 학습
 | no | Model | epochs | batch_size |   img_size   | EarlyStopping | EarlyStopping_patience | ModelCheckpoint | file_name(.h5) | val_loss | val_acc | test_acc |
 |----|-------|--------|------------|--------------|---------------|------------------------|-----------------|----------------|----------|---------|----------|
