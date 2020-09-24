@@ -12,8 +12,8 @@
   * 코드 출처 : https://kau-deeperent.tistory.com/59
 
 ## 학습
-| no | Model | epochs | batch_size |   img_size   | EarlyStopping | EarlyStopping_patience | ModelCheckpoint | file_name(.h5) | val_loss | val_acc | test_acc |
-|----|-------|--------|------------|--------------|---------------|------------------------|-----------------|----------------|----------|---------|----------|
-| 1  | CIFAR10 | 30  | 32 | 100 x 100 | O | 3 | O | my_model | 1.0938 | 0.6433 | 5 / 5 |
-| 2  | CIFAR10 | 125  | 32 | 100 x 100 | O | 25 | O | my_model_1 | 1.0038 | 0.6906 | 3 / 5 |
-| 3  | CIFAR10 | 500  | 64 | 100 x 100 | X | X | O | my_model_2 | 1.0048 | 0.6973 | 5 / 5 |
+| no | Model | epochs | batch_size |   img_size   | number_of_img_per_pokemon | EarlyStopping | EarlyStopping_patience | file_name(.h5) | val_loss | val_acc | test_acc |
+|----|-------|--------|------------|--------------|---------------------------|---------------|------------------------|----------------|----------|---------|----------|
+| 1  | CIFAR10 | 30  | 32 | 100 x 100 | 3000 | O | 3 | my_model | 1.0938 | 0.6433 | 5 / 5 |
+| 2  | CIFAR10 | 125  | 32 | 100 x 100 | 3000 | O | 25 | my_model_1 | 1.0038 | 0.6906 | 3 / 5 |
+| 3  | CIFAR10 | 500  | 64 | 100 x 100 | 3000 | X | X | my_model_2 | 1.0048 | 0.6973 | 5 / 5 |
