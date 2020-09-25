@@ -10,6 +10,9 @@
 
 * 2020.09.17 Model_MobileNet.py 코드 추가
   * 코드 출처 : https://kau-deeperent.tistory.com/59
+  
+* 2020.09.25 remove_grayscale 코드 추가
+  * grayscale 이미지 삭제
 
 ## 학습
 | no | Model | epochs | batch_size |   img_size   | number_of_img_per_pokemon | EarlyStopping | EarlyStopping_patience | file_name(.h5) | val_loss | val_acc | test_acc |
